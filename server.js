@@ -9,6 +9,7 @@ import errorHandler from './middlewares/error.js'
 import userRoutes from "./routes/user.js"
 import projectRoutes from './routes/project.js'
 import taskRoutes from './routes/task.js'
+import messagesRoutes from './routes/message.js'
 
 // init
 dotenv.config()
@@ -26,8 +27,9 @@ app.use(cookieParser())
 
 // routes middlewares
 app.use('/api/user', userRoutes)
-app.use('/api/project', projectRoutes)
 app.use('/api/task', taskRoutes)
+app.use('/api/project', projectRoutes)
+app.use('/api/message', messagesRoutes)
 
 
 // error middlewares

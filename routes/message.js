@@ -1,10 +1,11 @@
-// for project and apply
-import express from "express";
-import Private from '../middlewares/auth.js';
+import express from 'express'
+import Private from '../middlewares/auth.js'
+import { getRoomMessages, insertMessage, deleteMessage } from '../controllers/message.js'
 
+const messagesRoutes = express.Router()
 
-const messageRoutes = express.Router()
+messagesRoutes.route('/insert-message').post(Private, insertMessage)
+messagesRoutes.route('/:roomID').get(Private, getRoomMessages)
+messagesRoutes.route('/:messageID/delete').delete(Private, deleteMessage)
 
-messageRoutes.post('/create-departement', Private, () => {});
-
-export default messageRoutes
+export default messagesRoutes

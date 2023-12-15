@@ -1,7 +1,7 @@
 import { Schema, model, Types } from "mongoose";
 
 const messageSchema = new Schema({
-  project: {
+  room: {
     type: Types.ObjectId,
     ref: 'Project'
   },
