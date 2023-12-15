@@ -1,6 +1,6 @@
 import {model, Schema, Types} from 'mongoose'
 
-const projectSchema = new Schema({
+const taskSchema = new Schema({
   name: {
     type: String,
     required: true
@@ -11,25 +11,17 @@ const projectSchema = new Schema({
     max: 250,
     required: true
   },
-  owner: {
-    type: Types.ObjectId,
-    ref: 'User'
-  },
-  employies: [{
-    type: Types.ObjectId,
-    ref: 'User'
-  }],
   submissions: [{
     type: Types.ObjectId,
     ref: 'Submission'
   }],
-  field: [{
-    type: String,
-  }]
+  endsIn: {
+    type: Date,
+  }
 }, {
   timestamps: true
 })
 
 
-const Project = model('Project', projectSchema)
-export default Project
+const Task = model('Task', taskSchema)
+export default Task
