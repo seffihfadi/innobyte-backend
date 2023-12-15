@@ -7,7 +7,8 @@ import cookieParser from "cookie-parser"
 import errorHandler from './middlewares/error.js'
 
 import userRoutes from "./routes/user.js"
-import adminRoutes from './routes/admin.js'
+import projectRoutes from './routes/project.js'
+import taskRoutes from './routes/task.js'
 
 // init
 dotenv.config()
@@ -25,7 +26,8 @@ app.use(cookieParser())
 
 // routes middlewares
 app.use('/api/user', userRoutes)
-app.use('/api/admin', adminRoutes)
+app.use('/api/project', projectRoutes)
+app.use('/api/task', taskRoutes)
 
 
 // error middlewares
