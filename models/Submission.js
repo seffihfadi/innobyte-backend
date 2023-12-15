@@ -15,6 +15,10 @@ const submittionSchema = new Schema({
     max: 250,
     required: true
   }, 
+  assignment: {
+    type: String,
+    required: true
+  },
   status: {
     type: String,
     enum: ['pending', 'accepted', 'rejected'],
