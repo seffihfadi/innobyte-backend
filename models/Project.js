@@ -19,11 +19,11 @@ const projectSchema = new Schema({
     type: Types.ObjectId,
     ref: 'User'
   }],
-  submissions: [{
-    type: Types.ObjectId,
-    ref: 'Submission'
-  }],
-  field: [{
+  // submissions: [{
+  //   type: Types.ObjectId,
+  //   ref: 'Submission'
+  // }],
+  fields: [{
     type: String,
   }]
 }, {

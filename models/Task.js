@@ -11,6 +11,10 @@ const taskSchema = new Schema({
     max: 250,
     required: true
   },
+  project: {
+    type: Types.ObjectId,
+    ref: 'Project'
+  }, 
   submissions: [{
     type: Types.ObjectId,
     ref: 'Submission'
