@@ -124,7 +124,7 @@ https://innobyte-backend2.onrender.com/api
 
 ## Create Task
 
-- **Endpoint:** `/tasks`
+- **Endpoint:** `task/create-task`
 - **Method:** `POST`
 - **Description:** Create a new task.
 - **Request:**
@@ -148,7 +148,7 @@ https://innobyte-backend2.onrender.com/api
 
 ## Delete Task
 
-- **Endpoint:** `/tasks/:taskID`
+- **Endpoint:** `task/delete-task/:taskID`
 - **Method:** `DELETE`
 - **Description:** Delete a specific task.
 - **Parameters:**
@@ -164,7 +164,7 @@ https://innobyte-backend2.onrender.com/api
 
 ## Add Submission
 
-- **Endpoint:** `/tasks/:taskID/submissions`
+- **Endpoint:** `task/add-submission/:taskID`
 - **Method:** `POST`
 - **Description:** Add a submission to a task.
 - **Parameters:**
@@ -187,7 +187,7 @@ https://innobyte-backend2.onrender.com/api
 
 ## Evaluate Submission
 
-- **Endpoint:** `/submissions/:submittionID/evaluate`
+- **Endpoint:** `task/evaluate-submission/:submittionID`
 - **Method:** `PUT`
 - **Description:** Evaluate a submission (accept or reject).
 - **Parameters:**
@@ -211,7 +211,7 @@ https://innobyte-backend2.onrender.com/api
 
 ## Get Submission
 
-- **Endpoint:** `/submissions/:submittionID`
+- **Endpoint:** `task/get-submission/:submittionID`
 - **Method:** `GET`
 - **Description:** Get details of a specific submission.
 - **Parameters:**
@@ -230,7 +230,7 @@ https://innobyte-backend2.onrender.com/api
 
 ## Signup User
 
-- **Endpoint:** `/signup`
+- **Endpoint:** `user/signup`
 - **Method:** `POST`
 - **Description:** Register a new user.
 - **Request:**
@@ -254,7 +254,7 @@ https://innobyte-backend2.onrender.com/api
 
 ## Signin User
 
-- **Endpoint:** `/signin`
+- **Endpoint:** `user/signin`
 - **Method:** `POST`
 - **Description:** Sign in an existing user.
 - **Request:**
@@ -276,7 +276,7 @@ https://innobyte-backend2.onrender.com/api
 
 ## Signout User
 
-- **Endpoint:** `/signout`
+- **Endpoint:** `user/signout`
 - **Method:** `GET`
 - **Description:** Sign out the currently authenticated user.
 - **Response:**
@@ -290,7 +290,7 @@ https://innobyte-backend2.onrender.com/api
 
 ## Get User
 
-- **Endpoint:** `/user`
+- **Endpoint:** `user/getuser`
 - **Method:** `GET`
 - **Description:** Get details of the currently authenticated user.
 - **Response:**
@@ -312,7 +312,7 @@ https://innobyte-backend2.onrender.com/api
 
 ## Get Room Messages
 
-- **Endpoint:** `/messages/:projectID`
+- **Endpoint:** `message/insert-message/:projectID`
 - **Method:** `GET`
 - **Description:** Get messages for a specific project room.
 - **Parameters:**
@@ -336,7 +336,7 @@ https://innobyte-backend2.onrender.com/api
 
 ## Insert Message
 
-- **Endpoint:** `/messages`
+- **Endpoint:** `/message/:roomID`
 - **Method:** `POST`
 - **Description:** Insert a new message into a project room.
 - **Request:**
@@ -358,7 +358,7 @@ https://innobyte-backend2.onrender.com/api
 
 ## Delete Message
 
-- **Endpoint:** `/messages/:messageID`
+- **Endpoint:** `/message/:messageID/delete`
 - **Method:** `DELETE`
 - **Description:** Delete a specific message.
 - **Parameters:**
