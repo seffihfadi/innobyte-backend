@@ -18,18 +18,7 @@ const userSchema = new Schema({
     required: [true, 'password is required']
 
   },
-  // access: [{ 
-  //   role: {
-  //     type: String,
-  //     enum: ['leader', 'co-leader', 'manager', 'co-manager', 'member', 'president', 'vice-president']
-  //   },
-  //   departement: {
-  //     type: String,
-  //   },
-  // }], 
-  // EX: [{ role: 'leader', departement: 'IT' }, ...],
-  // roles, departements and logo ... are created by the president in first time
-  
+
   rank: {
     type: Number,
     default: 0
