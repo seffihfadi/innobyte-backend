@@ -15,7 +15,7 @@ const projectRoutes = express.Router()
 
 projectRoutes.post('/create-project', Private, createProject);
 projectRoutes.put('/toggle-apply', Private, toggleApply);
-projectRoutes.get('/get-project', Private, getProject);
+projectRoutes.get('/get-project/:projectID', Private, getProject);
 projectRoutes.get('/get-projects', Private, getProjects);
 projectRoutes.post('/apply-decision/:applyID', Private, applyDecision);
 projectRoutes.delete('/delete-project/:projectID', Private, deleteProject);

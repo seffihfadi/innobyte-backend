@@ -1,9 +1,13 @@
 # managment-system
 # API Documentation
 
+
+## Base URL
+https://innobyte-backend2.onrender.com/api
+
 ## Create Project
 
-- **Endpoint:** `/projects`
+- **Endpoint:** `project/create-project`
 - **Method:** `POST`
 - **Description:** Create a new project.
 - **Request:**
@@ -26,7 +30,7 @@
 
 ## Delete Project
 
-- **Endpoint:** `/projects/:projectID`
+- **Endpoint:** `/project/delete-project/:projectID`
 - **Method:** `DELETE`
 - **Description:** Delete a specific project.
 - **Parameters:**
@@ -42,7 +46,7 @@
 
 ## Get Project
 
-- **Endpoint:** `/projects/:projectID`
+- **Endpoint:** `/projects/get-project/:projectID`
 - **Method:** `GET`
 - **Description:** Get details of a specific project.
 - **Parameters:**
@@ -61,7 +65,7 @@
 
 ## Get Projects
 
-- **Endpoint:** `/projects`
+- **Endpoint:** `/project/get-projects`
 - **Method:** `GET`
 - **Description:** Get a list of projects for the authenticated user.
 - **Response:**
@@ -70,7 +74,7 @@
 
 ## Toggle Apply
 
-- **Endpoint:** `/apply`
+- **Endpoint:** `/projects/toggle-apply`
 - **Method:** `POST`
 - **Description:** Apply or unapply for a project.
 - **Request:**
@@ -92,7 +96,7 @@
 
 ## Apply Decision
 
-- **Endpoint:** `/apply/:applyID/decision`
+- **Endpoint:** `project/apply-decision/:applyID`
 - **Method:** `PUT`
 - **Description:** Accept or reject an apply for a project.
 - **Parameters:**
